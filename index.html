@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-language" content="en">
+  <meta name="theme-color" content="black" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+  <title> Mario Game</title>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Press+Start+2P'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./assets/style.css">
+
+
+
+
+</head>
+
+<body id="test" onclick="openFullscreen();">
+
+
+
+
+
+
+  <div id="rotation-warning">
+    <i class="material-icons">screen_rotation</i>
+    <p>Please rotate your device</p>
+  </div>
+
+
+
+
+
+  <!-- modal -->
+
+
+
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog video-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-body" id="start_music">
+
+          <img src="assets/Instructions1.png" alt="" class="src" data-dismiss="modal" onclick="openFullscreen();">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="winner" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog video-dialog">
+
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <img src="assets/congratulationwindow.png" alt="" class="src">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end modal -->
+
+
+
+
+
+
+  <!-- partial:index.partial.html -->
+  <div class="title hide">
+    <h2>You win !</h2>
+    <a href="#">Replay</a>
+  </div>
+
+  <div class="scene">
+    <div class="steps">
+      <div class="three" id="three">
+        <img src="./assets/LOGO_1.png" alt="" class="src">
+
+      </div>
+      <div class="two" id="two">
+        <img src="./assets/Logo_Vijay_with_circle.png" alt="" class="src">
+
+
+      </div>
+      <div class="one" id="one">
+        <img src="./assets/giftbox.png" alt="" class="src">
+
+
+      </div>
+    </div>
+
+    <!-- <h1>SUPER MARIO</h1> -->
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+
+
+    <div class="box" id="mybox1">
+    </div>
+    <div class="box2" id="mybox2">
+    </div>
+    <div class="box3" id="mybox3">
+    </div>
+
+    <div class="box4" id="mybox2">
+    </div>
+    <div class="box5" id="mybox3">
+    </div>
+    <div class="box6" id="mybox3">
+    </div>
+
+    <!-- <div class="box7" id="mybox3">
+    </div> -->
+
+    <div class="coin">
+    </div>
+    <div class="coin2">
+    </div>
+    <div class="coin3">
+    </div>
+
+    <div class="mario">
+    </div>
+
+    <div class="floor">
+    </div>
+
+  </div>
+  <!-- partial -->
+
+
+
+  <div class="left float5">
+  </div>
+  <div class="right float5">
+
+  </div>
+  <div class="top float5">
+
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src="./assets/script.js"></script>
+
+
+  <script type="text/javascript">
+
+    
+
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
+    $(window).on('load', function () {
+      $('#myModal').modal('show');
+
+
+      // $('#winner').modal('show');
+
+
+    });
+
+    $('#start_music').click(function(){
+      mario_bgd1.play();
+      mario_bgd2.play();
+      mario_bgd3.play();
+  mario_bgd1.loop = true;
+    })
+  </script>
+
+
+  <script>
+    var elem = document.getElementById("test");
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
+    }
+  </script>
+
+  <script>
+
+
+
+  </script>
+
+
+</body>
+
+</html>
